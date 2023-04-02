@@ -1,0 +1,101 @@
+'use strict';
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkInsert('products', [
+      {
+        name: 'Product 1',
+        qty: 10,
+        picture: 'https://picsum.photos/200',
+        expired_at: '2023-12-31',
+        is_active: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Product 2',
+        qty: 5,
+        picture: 'https://picsum.photos/200',
+        expired_at: '2024-06-30',
+        is_active: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Product 3',
+        qty: 3,
+        picture: 'https://picsum.photos/200',
+        expired_at: '2022-09-30',
+        is_active: false,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Product 4',
+        qty: 15,
+        picture: 'https://example.com/product4.jpg',
+        expired_at: '2023-05-03',
+        is_active: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Product 5',
+        qty: 12,
+        picture: 'https://example.com/product5.jpg',
+        expired_at: '2023-05-04',
+        is_active: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Product 6',
+        qty: 8,
+        picture: 'https://example.com/product6.jpg',
+        expired_at: '2023-05-05',
+        is_active: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Product 7',
+        qty: 18,
+        picture: 'https://example.com/product7.jpg',
+        expired_at: '2023-05-06',
+        is_active: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Product 8',
+        qty: 3,
+        picture: 'https://example.com/product8.jpg',
+        expired_at: '2023-05-07',
+        is_active: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Product 9',
+        qty: 25,
+        picture: 'https://example.com/product9.jpg',
+        expired_at: '2023-05-08',
+        is_active: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        name: 'Product 10',
+        qty: 7,
+        picture: 'https://example.com/product10.jpg',
+        expired_at: '2023-05-09',
+        is_active: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+    ]);
+  },
+
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('products', null, {});
+  },
+};
